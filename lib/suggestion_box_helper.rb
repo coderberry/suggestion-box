@@ -5,7 +5,7 @@ module SuggestionBoxHelper
     f = File.open("#{RAILS_ROOT}/vendor/plugins/suggestion_box/lib/template.html")
     ret = ""
     f.each do |line|
-      ret << line.gsub('[[application_name]]'){application_name}.gsub('[[url]]'){config[:url]}
+      ret << line.gsub('[[application_name]]'){application_name}.gsub('[[url]]'){options[:url]}
     end
     return ret
   end
