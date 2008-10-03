@@ -1,0 +1,21 @@
+SuggestionBox
+=============
+
+SuggestionBox Helper.  For Partner Fusion use only.
+
+
+Example
+=======
+
+Make sure you have the config file 'suggestion_box.yml' in your config folder:
+
+# config/suggestion_box.yml
+--- 
+  :url: url_to_suggesion_box (including http/https)
+  
+  
+# app/layouts/application.html.erb (before </body> tag)
+<%= suggestion_box('my_application_name') %>
+
+
+Copyright (c) 2008 Partner Fusion, released under the MIT license
