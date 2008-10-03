@@ -1,0 +1,38 @@
+<div id="suggestion_box_button" style="position: absolute; right: 0; top: 0; color: #fff; padding: 5px;">
+  <a href="#" style="color: #fff; text-decoration: none;" onclick="$('#suggestion_box_button').hide(); $('#suggestion_box').show('slow'); return false;">?</a>
+</div>
+<div id="suggestion_box" style="display: none; position: absolute; right: 0; top: 0; background-color: #000; background: url('http://suggestions.partnerfusion.com/images/background.png'); border-left: 1px solid #fff; border-bottom: 1px solid #fff; color: #fff; padding: 20px;">
+<form action="[[url]]" method="post" target="HiddenFrame">
+  <input type="hidden" name="application" value="[[application_name]]"/>
+  <p>
+    <label>Name</label>
+    <input id="suggestion_name" type="text" name="name" value="" style="width: 300px; color: #fff; font-size: 14px; background-color: #222; border: 1px solid #727B78; padding: 3px; letter-spacing: 1px; font-family: Arial, Helvetica, sans-serif;"/>
+  </p>
+  <p>
+    <label>Email</label>
+    <input type="text" name="email" value="" style="width: 300px; color: #fff; font-size: 14px; background-color: #222; border: 1px solid #727B78; padding: 3px; letter-spacing: 1px; font-family: Arial, Helvetica, sans-serif;"/>
+  </p>
+  <p>
+    <label>Priority</label>
+    <select name="priority" style="width: 306px; color: #fff; font-size: 14px; background-color: #222; border: 1px solid #727B78; padding: 3px; letter-spacing: 1px; font-family: Arial, Helvetica, sans-serif;">
+      <option value="1">Urgent</option>
+      <option value="2">High</option>
+      <option value="3">Medium</option>
+      <option value="4">Low</option>
+    </select>
+  </p>
+  <p>
+    <label>Suggestion</label>
+    <textarea name="comments" cols="30" rows="4" style="width: 300px; color: #fff; font-size: 14px; background-color: #222; border: 1px solid #727B78; padding: 3px; letter-spacing: 1px; font-family: Arial, Helvetica, sans-serif;"></textarea>
+  </p>
+  <p>
+    <label>&nbsp;</label>
+    <input type="image" style="margin-top: 10px;" src="http://suggestions.partnerfusion.com/images/add_suggestion_button.gif" border="0" onclick="$('#suggestion_box').hide('slow'); $('#suggestion_box_button').show('slow');"/>
+    <a href="#" onclick="$('#suggestion_box').hide('slow'); $('#suggestion_box_button').show('slow');"><img style="margin-top: 10px;" src="http://suggestions.partnerfusion.com/images/cancel_button.gif" border="0"/></a>
+  </p>
+</form>
+<iframe id="HiddenFrame"
+  name="HiddenFrame"
+  style="width:0px; height:0px; border: 0px"
+  src=""></iframe>
+</div>
